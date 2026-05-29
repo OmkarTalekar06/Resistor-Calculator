@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resistor Color Code Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Resistor Color Code Calculator</h1>
+
+            <div class="top-controls">
+                <select id="resistorType">
+                    <option value="4">4 Band</option>
+                    <option value="5">5 Band</option>
+                    <option value="6">6 Band</option>
+                </select>
+
+                <button id="themeBtn">🌙 Theme</button>
+            </div>
+        </header>
+
+        <!-- Resistor -->
+        <div class="selector-card">
+
+    <div class="band-selectors" id="bandSelectors"></div>
+
+</div>
+
+        <!-- Color Palette -->
+        <div class="palette" id="palette"></div>
+
+        <!-- Output -->
+        <div class="output-card">
+
+            <h2>Calculated Value</h2>
+
+            <div class="result" id="result">
+                0Ω
+            </div>
+
+            <div class="details">
+                <p><strong>Ohms:</strong> <span id="ohms">0</span></p>
+                <p><strong>Kilo Ohms:</strong> <span id="kilo">0</span></p>
+                <p><strong>Mega Ohms:</strong> <span id="mega">0</span></p>
+                <p><strong>Tolerance:</strong> <span id="tolerance">±0%</span></p>
+                <p id="tempRow"><strong>Temp Coefficient:</strong> <span id="tempCoeff">-</span></p>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="randomBtn">Random</button>
+            <button id="resetBtn">Reset</button>
+            <button id="copyBtn">Copy Result</button>
+
+        </div>
+
+        <!-- Steps -->
+        <div class="steps-card">
+
+            <h2>Calculation Steps</h2>
+
+            <div id="steps"></div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="table-card">
+
+            <h2>Resistor Color Meaning</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color</th>
+                        <th>Digit</th>
+                        <th>Multiplier</th>
+                        <th>Tolerance</th>
+                    </tr>
+                </thead>
+
+                <tbody id="colorTable"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
